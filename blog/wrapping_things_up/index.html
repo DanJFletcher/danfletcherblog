@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<HTML>
+
+	<HEAD>
+		
+		<TITLE>Dan Fletcher</TITLE>
+
+                <!--<link rel="stylesheet" type="text/css" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">-->
+
+                <!-- Latest compiled and minified CSS -->
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+                <!-- Optional theme -->
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+                <!-- Latest compiled and minified JavaScript -->
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+           
+		<link rel="stylesheet" type="text/css" href="http://danfletcherblog.ca/blog/common.css">
+
+                                
+
+	</HEAD>
+
+	<BODY>
+
+		    <!--<nav class="nav">-->
+			<ul class="nav nav-tabs">
+				<li role="presentation"><a HREF="http://danfletcherblog.ca">HOME</a></li>
+				<li role="presentation"><a HREF="http://danfletcherblog.ca/apps/apps.html">APPS</a></li>
+				<li role="presentation"><a HREF="http://danfletcherblog.ca/documentation/index.html">DOCUMENTATION</a></li>
+				<li role="presentation"><a HREF="http://danfletcherblog.ca/about">ABOUT</a></li>
+                                <li role="presentation" class="active"><a HREF="http://danfletcherblog.ca/blog/">BLOG</a></li>
+			</ul>
+			
+			<div class="blog">
+				<div id="header">
+					<p>Wrapping Things Up</p>
+				</div>
+				<div id="date">
+					<p>Posted: Feb 4/15</p>
+				</div>
+				
+				<span class="fw_sanitized"><p><img src="http://www.thatwhitepaperguy.com/images/wrapped-up-final.jpg" width="250" /></p>
+				
+				<div id="imgSource">
+				<p><a href="http://www.thatwhitepaperguy.com/images/wrapped-up-final.jpg" target="_blank" rel="nofollow">
+				<font size="2">http://www.thatwhitepaperguy.com/images/wrapped-up-final.jpg</font></a></p><p><br /></p>
+				</div>
+				
+				<p><span style="white-space:pre">	</span>Mmmm... Sheperd&apos;s Pie!! I know, you probably don&apos;t want to hear about what I&apos;m 
+				chewing as I write this blog but damn. I LOVE me some Sheperd&apos;s Pie!&#160;</p><p><span style="white-space:pre">	</span>Anyway, back to 
+				our game. Last time we left off with a list of bugs that needed to be fixed and some features to add/change. That list looked like this:</p>
+				
+				<p>&#160;</p><p><font size="3">1. Fix crappy controls</font></p>
+				<p><font size="3">2. Add angular control to the ball</font></p>
+				<p><font size="3">3. Fix crappy collision</font></p>
+				<p><font size="3">4. Add a pause function</font></p>
+				
+				<p><font size="3"></font><span style="white-space:pre">	</span>Before I forget, the current source code for our game is&#160;
+				<a href="http://fletcherapps.net84.net/Apps/Apps-Pong/sketch_pong.pde" target="_blank" rel="nofollow">here.</a></p><p><br /></p>
+				
+				<p><span style="white-space:pre">	</span>...Here&apos;s where I learn an unfortunate lesson. Now that I&apos;ve gone back to look at 
+				the source code to blog about the changes I made I just realized I don&apos;t know exactly what was changed since the last time. I made very 
+				poor decisions in the organization of my code. Before I go on anyfurther let&apos;s just go over some of the changes that I did make.</p>
+				
+				<p><span style="white-space:pre">	</span>First of all I fixed everything on our list. On top of that though, I also added mouse control to
+				the paddle, so if you play the game you&apos;ll have no idea if I fixed the crappy controls unless you comment out the section of code that is 
+				responsible for mouse control. There were also a few glitches that were almost game breaking. sometimes the ball would get stuck in the top or 
+				bottom wall. Because of how the AI is handled, this ment you had to let the ball score on your side to get it out. This could meen losing if the
+				AI paddle&apos;s score was 4. So that also is fixed.</p>
+				
+				<p><span style="white-space:pre">	</span>If you go to this 
+				<a href="http://fletcherapps.net84.net/Apps/Apps-Pong/Pong.html" target="_blank" rel="nofollow">link</a>
+				, it will take you to the game and you will see that it is actually a pretty functional game. Definatly a lot better then it was when we last
+				 left off.
+				 However functional code is not always good code, and my code is terrible. This is my first app using processing.js and It&apos;s also my first 
+				 app written to be uploaded to the internet. I didn&apos;t know how to properly organize my code in processing before starting this project.
+				 That&apos;s why all of our classes are jumbled up in one big file. I also used poor practices by not commenting the code properly, and since I 
+				 went a few days without looking at it, the code has become cluttered and hard to read.&#160;</p>
+				 
+				 <p><span style="white-space:pre">	</span>The final and biggest mistake I think I made while doing this blog though is not saving multiple
+				 instances of my code as I progressed. I should have had files relevent to each blog post so I didn&apos;t have to sort out what changes I made
+				 since the last post. If I did this, I would have easily been able to look at the relevent changes to the code for today&apos;s post, and then
+				 update the more reascent changes after.&#160;</p>
+				 
+				 <p><span style="white-space:pre">	</span>This blogging / tutorial thing is going to require me to be a more careful programmer. I think
+				 it&apos;s also required of me to keep the distance between posts much shorter, so that next time I don&apos;t have too many changes to the 
+				 code by the time I post again.</p><p><span style="white-space:pre">	</span>Sorry for anyone who actually stumbled across the blog hopeing
+				 to see this through to the end. I will keep the source code up for the game so that you can still learn from my algorithms and use them when
+				 creating your own projects. Just note that there are better ways of keeping code clean and maintanable. Having maintanable code is a must when
+				 developing anything even if it&apos;s just a small project like pong. Learn to comment effectively and document major changes to your code so
+				 you can always go back to previous builds.&#160;</p><p><span style="white-space:pre">	</span>If your interestd in learning good programming
+				 practices I strongly recommend watching Stanford&apos;s CS106a on youtube. It&apos;s all about programming methodologies, and you will learn 
+				 java along the way if don&apos;t know it already. The playlist on youtube is&#160;
+				 <a href="https://www.youtube.com/watch?v=KkMDCCdjyW8&amp;list=PL84A56BC7F4A1F852" target="_blank" rel="nofollow">here.</a></p>
+				 <p><span>	</span></p></span>
+			</div>
+			
+	</body>
+	
+</html>

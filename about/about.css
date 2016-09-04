@@ -1,0 +1,47 @@
+.nav {
+	FONT-WEIGHT: BOLD;
+	FONT-SIZE: 20PX;
+}
+
+.entry {
+	position: relative;
+	left: 50px;
+	top: -15px;
+	margin-left: auto;
+	margin-right: auto;
+	
+	padding: 15px;
+	width: 800px;
+}
+	h2 {
+		font-size: 140px;
+	}
+
+	.entry p {
+		padding: 15px;
+		font-size: 30px;
+		width: 670px;
+	}
+	
+	.entry #body {
+		position: absolute;
+		top: 595px;
+	}
+	
+	.entry #introP {
+		position: relative;
+		top: -580px;
+		left: 425px;
+	}
+	
+	.entry #introP p {
+		width: 270px;
+		font-size: 38px;
+	}
+	
+#watermark {
+	position: absolute;
+	top: 3100px;
+	left: 35%;
+
+}

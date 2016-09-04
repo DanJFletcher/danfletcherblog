@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<HTML>
+
+	<HEAD>
+		
+		<TITLE>Dan Fletcher</TITLE>
+
+                <!--<link rel="stylesheet" type="text/css" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">-->
+
+                <!-- Latest compiled and minified CSS -->
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+                <!-- Optional theme -->
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+                <!-- Latest compiled and minified JavaScript -->
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+           
+		<link rel="stylesheet" type="text/css" href="http://danfletcherblog.ca/blog/common.css">
+
+                                
+
+	</HEAD>
+
+	<BODY>
+
+		    <!--<nav class="nav">-->
+			<ul class="nav nav-tabs">
+				<li role="presentation"><a HREF="http://danfletcherblog.ca">HOME</a></li>
+				<li role="presentation"><a HREF="http://danfletcherblog.ca/apps/apps.html">APPS</a></li>
+				<li role="presentation"><a HREF="http://danfletcherblog.ca/documentation/index.html">DOCUMENTATION</a></li>
+				<li role="presentation"><a HREF="http://danfletcherblog.ca/about">ABOUT</a></li>
+                                <li role="presentation" class="active"><a HREF="http://danfletcherblog.ca/blog/">BLOG</a></li>
+			</ul>
+			
+			<div class="blog">
+				<div id="header">
+					<p>Bug Zapper</p>
+				</div>
+				<div id="date">
+					<p>Posted: Jan 24/15</p>
+				</div>
+	
+				<span class="fw_sanitized"><p><font size="6"><span style="white-space:pre">	</span>So, If by some miracle, you&apos;ve stumbled on this
+				blog, you know we left off with making a pong clone. You can play the most up to date version
+				
+				<a target="_blank" href="http://danfletcherblog.ca/apps/paddles">here</a>&#160;along with the 
+				
+				<a target="_blank" href="http://danfletcherblog.ca/apps/paddles/sketch_paddles.pde">source code.</a>
+				</font></p><p><br /></p>
+				
+				<p><font size="6"><span style="white-space: pre;">	</span>Our pong clone finally has an end condition!! This means by rights it actually 
+				is a game. You can win, you can loose and the game will even congratulate, or commiserate you when the game is over - although I wouldn&apos;t
+				take "Game Over" as a commiseration, but you get the point.</font></p><p><br /></p>
+				
+			 	<p><font size="6"><span style="white-space:pre">       </span>Where I left off with the blog yesterday there was 
+			 	also a minor issue that I resolved last night. When you clicked on the link, the game started right away before you were ready to start. Not 
+			 	only that you had no control of the game until you actually clicked on the canvas to activate it. So now the game cancommiseationt start
+			 	until 'spacebar' is pressed, and that in turn won&apos;t work untill the user has clicked on the canvas. Solved.</font></p><p><br /></p>
+			 	
+			 	<p><font size="6">I did that by making a boolean like this.</font></p>
+			 	
+			 	<div class="codeBlock">
+				 	<code>
+				 	<p><font size="3" color="#800000">boolean isRunning = false;</font></p>
+				 	</code>
+			 	</div>
+			 	
+			 	<p><font size="6">Next I changed my code so that my ball.update() and both paddle updates where only called in my draw() loop if isRunning was
+			 	set to true.</font></p>
+			 	
+			 	<div class="codeBlock">
+				 	<p>&#160;</p><p><font color="#800000" size="3"> 
+				 	 // update - if game is running, update game logic before objects are drawn to the screen</font>
+				 	</p>
+				 	<p><font color="#800000" size="3">  if(isRunning == true){</font></p>
+				 	<p><font color="#800000" size="3">
+				 	<span style="white-space:pre">	</span>ball.update(); </font></p>
+				 	<p><font color="#800000" size="3">
+				 	<span style="white-space:pre">	</span>leftPaddleInput();</font></p>
+				 	<p><font color="#800000" size="3">
+				 	<span style="white-space:pre">	</span>paddleAI();</font></p>
+				 	<p><font color="#800000" size="3">
+				 	<span style="white-space:pre">	</span>rightPaddle.update();</font></p>
+				 	<p><font color="#800000" size="3">
+				 	<span style="white-space:pre">	</span>leftPaddle.update();</font></p>
+				 	<p><font color="#800000" size="3">  }</font></p>
+			 	</div>
+			 	
+			 	<p><font size="6">Now I just needed a way to start the game so I added these functions.</font></p>
+			 	
+			 	<div class="codeBlock">
+				 	<p>&#160;</p><p><font color="#800000" size="3">
+				 	// start and pause game with SPACEBAR</font></p>
+				 	<p><font color="#800000" size="3">void spacePressed(){</font></p>
+				 	<p><font color="#800000" size="3">
+				 	<span style="white-space:pre">	</span>if(keyPressed){</font></p>
+				 	<p><font color="#800000" size="3">
+				 	<span style="white-space:pre">		</span>if(key == ' '){</font></p>
+				 	<p><font color="#800000" size="3">
+				 	<span style="white-space:pre">			</span>if (isRunning == false){</font></p>
+				 	<p><font color="#800000" size="3">
+				 	<span style="white-space:pre">				</span>isRunning = true;</font></p>
+				 	<p><font color="#800000" size="3">
+				 	<span style="white-space:pre">			</span>}</font></p>
+				 	<p><font color="#800000" size="3">
+				 	<span style="white-space:pre">		</span>}</font></p>
+				 	<p><font color="#800000" size="3">
+				 	<span style="white-space:pre">	</span>}</font></p>
+				 	<p><font color="#800000" size="3">  }</font></p>
+				 	<p>&#160;</p><p><font color="#800000" size="3">// text displayed when game is paused</font></p>
+				 	<p><font color="#800000" size="3">void gamePausedTxt(){</font></p>
+				 	<p><font color="#800000" size="3">
+				 	<span style="white-space:pre">	</span>if(isRunning == false){</font></p>
+				 	<p><font color="#800000" size="3">
+				 	<span style="white-space:pre">		</span>text("Game Paused. Press SPACE to play!",300,120);</font></p>
+				 	<p><font color="#800000" size="3">
+				 	<span style="white-space:pre">	</span>}</font></p>
+				 	<p><font color="#800000" size="3">}</font></p>
+			 	</div>
+			 	
+			 	<p><font size="6">The first function sets isRunning to true, starting the game. The second funtion just displays text to the user if isRunning
+			 	is False.</font></p><p><br /></p>
+			 	
+			 	<p><font size="6">Now to get the game to actually end, I just added some code that set isRunning to false if the value of score1 reached 5, or
+			 	if the value of score2 reached 5. If score1 reaches 5 it displays "YOU WIN!" else if score2 teaches 5 it displays "GAME OVER!". The code looks 
+			 	like this.</font></p><p>&#160;</p>
+			 	
+			 	<div class="codeBlock">
+				 	<p><font color="#800000" size="3">// checks if the game has ended and displays the appropriate text to the user.</font></p>
+				 	<p><font color="#800000" size="3">boolean isGameOver(){</font></p><p><font color="#800000" size="3">
+				 	<span style="white-space:pre">	</span>if(score1 == 5) { // if player wins</font></p>
+				 	<p><font color="#800000" size="3">
+				 	<span style="white-space:pre">		</span>isRunning = false;</font></p>
+				 	<p><font color="#800000" size="3">
+				 	<span style="white-space:pre">		</span>textSize(30);</font></p>
+				 	<p><font color="#800000" size="3">
+				 	<span style="white-space:pre">		</span>text("YOU WIN!", 325,350);</font></p>
+				 	<p><font color="#800000" size="3">
+				 	<span style="white-space:pre">		</span>return true;</font></p><p><font color="#800000" size="3">
+				 	<span style="white-space:pre">	</span>}</font></p>
+				 	<p><font color="#800000" size="3">
+				 	<span style="white-space:pre">	</span>if(score2 == 5) { // if player loses</font></p>
+				 	<p><font color="#800000" size="3">
+				 	<span style="white-space:pre">		</span>isRunning = false;</font></p>
+				 	<p><font color="#800000" size="3">
+				 	<span style="white-space:pre">		</span>textSize(30);</font></p><p><font color="#800000" size="3">
+				 	<span style="white-space:pre">		</span>text("GAME OVER!", 315,350);</font></p>
+				 	<p><font color="#800000" size="3">
+				 	<span style="white-space:pre">		</span>return true;</font></p>
+				 	<p><font color="#800000" size="3">
+				 	<span style="white-space:pre">	</span>}</font></p>
+				 	<p><font color="#800000" size="3">}</font></p>
+			 	</div>
+			 	
+			 	<p><font size="6">This is the code that gets called inside of our draw() funtion to make it all work.</font></p>
+			 	
+			 	<div class="codeBlock">
+				 	<p><font color="#800000" size="3">  // check if spacebar is pressed to start game</font></p>
+				 	<p><font color="#800000" size="3">  spacePressed();</font></p>
+				 	<p><font color="#800000" size="3">  gamePausedTxt();</font></p>
+				 	<p><font color="#800000" size="3">  isGameOver();</font></p>
+			 	</div>
+			 	
+			 	
+				<p><font size="5">Then I added a reset() funtion inside of the spacePressed() to reset the game when it ends.</font></p>
+				
+				<div class="codeBlock">	 	
+				 	<p><font color="#800000" size="3">void reset(){</font></p>
+				 	<p><font color="#800000" size="3">
+				 	<span style="white-space:pre">	</span>if(isGameOver() == true){</font></p>
+				 	<p><font color="#800000" size="3">
+				 	<span style="white-space:pre">		</span>score1 = 0;</font></p>
+				 	<p><font color="#800000" size="3">
+				 	<span style="white-space:pre">		</span>score2 = 0;</font></p>
+				 	<p><font color="#800000" size="3">
+				 	<span style="white-space:pre">		</span>leftPaddle.y = ( height / 2 ) - ( leftPaddle.h / 2 );</font></p>
+				 	<p><font color="#800000" size="3">
+				 	<span style="white-space:pre">		</span>rightPaddle.y = ( height / 2 ) - ( rightPaddle.h / 2 );</font></p>
+				 	<p><font color="#800000" size="3">
+				 	<span style="white-space:pre">	</span>}</font></p>
+				 	<p><font color="#800000" size="3">}</font></p>
+				 	<p><font color="#800000" size="3">// text displayed when game is paused</font></p>
+				 	<p>&#160;</p><p><font color="#800000" size="3">void gamePausedTxt(){</font></p>
+				 	<p>&#160;</p><p><font color="#800000" size="3">
+				 	<span style="white-space:pre">	</span>if(isRunning == false){</font></p>
+				 	<p>&#160;</p><p><font color="#800000" size="3">
+				 	<span style="white-space:pre">		</span>text("Game Paused. Press SPACE to play!",300,120);</font></p>
+				 	<p>&#160;</p>
+				 	<p><span style="white-space:pre">	 </span>
+				 	<font size="3" color="#800000">reset(); // this is where we put the new function.</font></p>
+				 	<p><font color="#800000" size="3">
+				 	<span style="white-space:pre"></span>
+				 	<span style="white-space:pre">	</span>}</font></p>
+				 	<p>&#160;</p><p><font color="#800000" size="3">}</font></p>
+			 	</div>
+			 	
+			 	<p><span style="font-size: xx-large;">
+			 	<span style="white-space:pre">	</span>Now we&#160;have a big task at hand. Even though our game is technically a game, it&apos;s not a very
+			 	good one. And I don&apos;t mean "pong" is a bad game, just specifically this pong. If you clicked on the link and tried play the game for a 
+			 	round you probably noticed a few things wrong with it. For starters the control of the paddle doesn&apos;t </span><i>feel </i>
+			 	<span style="font-size: xx-large;">right. This is of course only true if you figured out that 'W' and 'S' is for 'up' and 'down'. If you
+			 	accidently hit 2 keys at once you get some pretty shitty results. The paddle sometimes continues moving up even though you are trying to make 
+			 	it move down. So that&apos;s 1 to the list,</span></p><p><br /></p>
+			 	
+			 	<p><font size="6">1. fix crappy controls.</font></p><p><br /></p><p><font size="6">The next probably more obvious problem is that the ball 
+			 	<b>always</b>&#160;bounces at 45 degrees no matter how you hit the ball with your paddle. Anyone who played classic pong knows that this is not
+			 	how real pong is played. This is important because it goes hand in hand with the <i>feal</i>&#160;of the controls. The player should feel like 
+			 	he/she has some element of control with the balls direction by aiming for different spots on the paddle.&#160;</font></p>
+			 	
+			 	<p><font size="6">Because our ball only moves at one angle you probably relized a pattern in the game pretty quickly. After the first goal our
+			 	ball bounces once off our player paddle, once off the AI paddle, then once again off our player paddle resulting in a goal. All you have to do 
+			 	is make sure you don&apos;t let the ball pass your paddle and you will have a goal every 3 bounces no matter what. You have 0 control over what 
+			 	happens to the ball outside of a very boring binary that includes the results of hitting, or not hitting the ball. Epic fail on a video game!! 
+			 	The whole point of a game is to have an experience of choice and this game at it&apos;s core has 2... let the ball in, or bounce it back. So 
+			 	next on the list, and probably more tricky while arguably more important is,&#160;</font></p>
+			 	
+			 	<p><br /></p><p><font size="6">2. Add angular control to the ball.</font></p><p><br /></p>
+			 	
+			 	<p><font size="6">If you played more then one round of our current version of pong you also probably found another bug asside from god awful 
+			 	controls, and that&apos;s even shittier collision. If the ball hits the paddle at the just the right spot near either of it&apos;s corners, the 
+			 	ball gets trapped inside. It bounces frantically trying to escape until it eventually reaches the other side and hopefully flys off towards the 
+			 	AI paddle. If not, then it flys off into your goal giving the bot a point. So</font></p><p><br /></p>
+			 	
+			 	<p><font size="6">3. fix collision</font></p><p><br /></p>
+			 	
+			 	<p><font size="6">Last small detail is that spacebar only works when the game either has not yet started or after it has ended by winning or 
+			 	loseing. It would be nice to introduce an option to pause the game while in play. I did try adding this to the code last night, but because of 
+			 	the way I get my input there is some pretty funny results. Try copying the source code and see if you can add a line in the spacePressed() 
+			 	function that changes isRunning to false if it is true, and true if it is false. See what happens? Not good at all.</font></p><p><br /></p>
+			 	
+			 	<p><font size="6">To fix this will go along side fixing our paddle control. We need to store the last key state into a variable so we can 
+			 	compare it to the current key state. if space has already been pressed we don&apos;t want the game to continually setting isRunning over and 
+			 	over again. We only want it to be changed once untill we have lifted our finger off of the key, and then pressed it again to continue playing. 
+			 	This is the last significant change that needs to be done to our game to make true pong clone.</font></p>
+			 	
+			 	<p><font size="6">Our list now looks like this.</font></p><p><br /></p>
+			 	<p><font size="6">1. Fix crappy controls</font></p>
+			 	<p><font size="6">2. Add angular control to the ball</font></p>
+			 	<p><font size="6">3. Fix crappy collision</font></p>
+			 	<p><font size="6">4. Add a pause function</font></p></span>
+</div>
+			</div>
+			
+	<div id="watermark">
+	<br><br>
+		<p>Website created and designed by Dan Fletcher</p>
+	</div>
+			
+	</body>
+	
+</html>

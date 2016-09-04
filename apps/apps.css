@@ -1,0 +1,108 @@
+.nav {
+	FONT-WEIGHT: BOLD;
+	FONT-SIZE: 20PX;
+}
+
+.pageDescription {
+	position: absolute;
+	left: 580px;
+	
+}
+	.pageDescription h1 {
+		font-size: 100px;
+	}
+
+	.pageDescription .welcomeMsg {
+		margin: 15px;
+		width: 400px;
+		font-size: 35px;
+		color: rgb(120,120,120);
+	}
+	
+	.pageDescription img {
+		position: absolute;
+		z-index: -1;
+		top: 120px;
+		left: 460px;
+	
+	}
+
+.appsList {
+	position: relative;
+	left: 50px;
+	top: 10px;
+	width: 500px;
+	height: 560px;
+	background-color: rgb(80,80,80);
+	margin: 15px;
+	border-style: solid;
+	border-width: 15px;
+	
+}
+
+	.appsList h2 {
+		position: relative;
+		left: 10px;
+		color: rgb(20,25,25);
+		
+	}
+	
+	.appsList .header {
+		position: relative;
+		border-style: solid;
+		top: 15px;
+		left: 20px;
+		width: 430px;
+		background-color: rgb(200,200,200);
+	}
+	
+.news {
+	position: relative;
+	left: 65px;
+	top: 25px;
+	width: 500px;
+	border: 15px solid;
+}
+	.news .newsListing{
+		margin: 10px;
+	}
+	
+	.news .header h1 {
+		font-size: 85px;
+	}
+	
+	.news .newsListing p {
+		font-size: 22px;
+	}
+	
+	.news .date p {
+		font-size: 15px;
+	}
+
+.gamelisting {
+
+      width: 120px;
+      height: 100px;
+      float: left;
+      padding-top: 15px;
+      margin: 15px;
+      text-align: center;
+}
+
+      .gamelisting img
+      {
+        border: 1px solid #5366a6;
+      }
+    
+      .gamelisting a
+      {
+        font-weight: bold;
+      }
+      
+#watermark {
+	Text-align: center;
+
+}
+      
+      
+      

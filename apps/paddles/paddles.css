@@ -1,0 +1,35 @@
+BODY {
+BACKGROUND: RGB(240,235,230);
+}
+.TOP-HEADER {
+	BACKGROUND: RGB( 220, 220, 220 );
+	WIDTH: 900PX;
+	HEIGHT: 50PX;
+	FONT-WEIGHT: BOLD;
+	FONT-SIZE: 20PX;
+	/*BACKGROUND-IMAGE: URL('http://fletcherapps.net84.net/Home%20Page/H_ON_WTR.jpg');*/
+}
+.TOP-HEADER LI {
+	PADDING-BOTTOM: 200PX;
+	PADDING-RIGHT: 50PX;
+	DISPLAY: INLINE;
+}
+#mycanvas {
+	position: relative;
+	left: 50px;
+}
+#example {
+        color: white;
+	position: relative;
+	left: 50px;
+}
+#p1 {
+	position: relative;
+	left: 50px;
+}
+.app {
+	background: rgb(20,18,15);
+	width: 900px;
+	position: relative;
+	left: 50px;
+}

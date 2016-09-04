@@ -1,0 +1,55 @@
+<html><!DOCTYPE html>
+<HTML>
+
+	<HEAD>
+		
+		<TITLE>DF Blog</TITLE>
+		
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+                <!--<link rel="stylesheet" type="text/css" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">-->
+
+                <!-- Latest compiled and minified CSS -->
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+                <!-- Optional theme -->
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+                <!-- Latest compiled and minified JavaScript -->
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+           
+		<link rel="stylesheet" type="text/css" href="index.css">
+
+                                
+
+	</HEAD>
+
+	<BODY>
+
+		    <!--<nav class="nav">-->
+			<ul class="nav nav-tabs">
+				<li role="presentation"><a HREF="http://danfletcherblog.ca">HOME</a></li>
+				<li role="presentation"><a HREF="http://danfletcherblog.ca/apps/apps.html">APPS</a></li>
+				<li role="presentation" class="active"><a HREF="#">DOCUMENTATION</a></li>
+				<li role="presentation"><a HREF="http://danfletcherblog.ca/about">ABOUT</a></li>
+                                <li role="presentation"><a HREF="http://danfletcherblog.ca/blog/">BLOG</a></li>
+			</ul>
+		    
+
+		<div class="HOME-DESCRIPTION">
+			<p><?php
+			    $myfilename = "using jQuery with JS.txt";
+			    if(file_exists($myfilename)){
+			      echo file_get_contents($myfilename);
+			    }?>
+			</p>
+			
+			
+			    	<iframe width=950 height=100% scrolling=yes frameborder=no src="using jQuery with JS.txt" style="border: 0;" seamless>
+    				</iframe>
+    				
+    				
+			
+	</BODY>
+
+</HTML>	

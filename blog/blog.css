@@ -1,0 +1,73 @@
+.nav {
+	FONT-WEIGHT: BOLD;
+	FONT-SIZE: 20PX;
+}
+
+/* http://css-tricks.com/examples/hrs/ */
+hr {
+    border: 0;
+    height: 1px;
+    width: 90%;
+    background: #333;
+    background-image: -webkit-linear-gradient(left, #ccc, #333, #ccc); 
+    background-image:    -moz-linear-gradient(left, #ccc, #333, #ccc); 
+    background-image:     -ms-linear-gradient(left, #ccc, #333, #ccc); 
+    background-image:      -o-linear-gradient(left, #ccc, #333, #ccc); 
+}
+
+.blogList {
+	position: relative;
+	top: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 60%;
+	border-style: solid; 
+	border-width: 15px;	
+}
+	.blogList #header{
+		font-Size: 85px;
+		margin: 15px;
+	}
+	
+	blogListing {
+		margin: 15px;
+	}
+	
+	.blogListing #header p {
+		text-align: center;
+		font-size: 50px;
+	}
+	
+	.blogListing #date p {
+		font-size: 15px;
+		margin: 15px;
+	}
+	.blogListing #content p {
+		font-size: 25px;
+		margin: 15px;
+	}
+
+.blog {
+	position: relative;
+	top: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 60%;
+	border-style: solid; 
+	border-width: 15px;
+}
+	.blog p {
+		text-align: left;
+		font-size: 25px;
+		margin: 15px;
+	}
+	
+	.blog #header p {
+		text-align: center;
+		font-size: 50px;
+	}
+	
+	.blog #date p {
+		padding-left: 15px;
+		font-size: 15px;
+	}

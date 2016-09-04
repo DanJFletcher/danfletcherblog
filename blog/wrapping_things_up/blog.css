@@ -1,0 +1,29 @@
+.nav {
+	FONT-WEIGHT: BOLD;
+	FONT-SIZE: 20PX;
+}
+
+.blog {
+	position: relative;
+	top: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 60%;
+	border-style: solid; 
+	border-width: 15px;
+}
+	.blog p {
+		text-align: left;
+		font-size: 25px;
+		margin: 15px;
+	}
+	
+	.blog #header p {
+		text-align: center;
+		font-size: 50px;
+	}
+	
+	.blog #date p {
+		padding-left: 15px;
+		font-size: 15px;
+	}

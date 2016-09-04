@@ -1,0 +1,49 @@
+.nav {
+	FONT-WEIGHT: BOLD;
+	FONT-SIZE: 20PX;
+}
+
+.HOME-DESCRIPTION {
+	position: absolute;
+	top: 45px;
+	left: 18%;
+        padding-left: 15px;
+	WIDTH: 950PX;
+}
+
+	.HOME-DESCRIPTION H1 {
+		FONT-SIZE: 120PX;
+		FONT-WEIGHT: BOLD;
+		COLOR: RGB(180,60,40);
+	}
+	
+	.HOME-DESCRIPTION P {
+		position: relative;
+		left: 220px;
+		width: 520px;
+		FONT-SIZE: 35PX;
+		
+	}
+
+img {
+	position: relative;
+	left: 19%;
+	border-style: solid;
+	border-width: 15px;
+}
+
+#selfie {
+
+	position: relative;
+	padding-right: 30px;
+	padding-bottom: 30px;
+	top: 165px;
+	left: 15px;
+}
+
+#watermark {
+	position: relative;
+	top: 1100px;
+	Text-align: center;
+	
+}

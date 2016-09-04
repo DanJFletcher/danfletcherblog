@@ -1,0 +1,63 @@
+# Translation of Development (trunk) in English (Canada)
+# This file is distributed under the same license as the Development (trunk) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2015-11-06 05:52:20+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/1.0-alpha-1100\n"
+"Project-Id-Version: Development (trunk)\n"
+
+#: Utils.php:280
+msgid "You do not have sufficient permissions to access this page."
+msgstr "You do not have sufficient permissions to access this page."
+
+#: Admin.php:166
+msgid "Settings"
+msgstr "Settings"
+
+#: Admin.php:92 AdminTemplate.php:28
+msgid "AdSense Plugin"
+msgstr "AdSense Plugin"
+
+#: Admin.php:110
+msgid "Disable ads on this page"
+msgstr "Disable ads on this page"
+
+#: AdminTemplate.php:31
+msgid "To use the AdSense Plugin, you need to sign in to your Google account."
+msgstr "To use the AdSense Plugin, you need to sign in to your Google account."
+
+#: AdminTemplate.php:33
+msgid "You should use the Google account that you use for Google products that relate to this site. For example, if you have an AdSense account or a Google Analytics account that you use with this site, use the associated Google account."
+msgstr "You should use the Google account that you use for Google products that relate to this site. For example, if you have an AdSense account or a Google Analytics account that you use with this site, use the associated Google account."
+
+#: AdminTemplate.php:38
+msgid "Get started"
+msgstr "Get started"
+
+#: AdminTemplate.php:43
+msgid "If you don't have a Google account, you can <a href=\"https://accounts.google.com/SignUp\" target=\"_blank\">create one now</a>."
+msgstr "If you don't have a Google account, you can <a href=\"https://accounts.google.com/SignUp\" target=\"_blank\">create one now</a>."
+
+#. Plugin Name of the plugin/theme
+msgid "Google AdSense"
+msgstr "Google AdSense"
+
+#. Plugin URI of the plugin/theme
+msgid "http://wordpress.org/plugins/google-publisher"
+msgstr "http://en.wordpress.org/plugins/google-publisher"
+
+#. Description of the plugin/theme
+msgid "Use Google AdSense and other Google tools with your WordPress site."
+msgstr "Use Google AdSense and other Google tools with your WordPress site."
+
+#. Author of the plugin/theme
+msgid "Google"
+msgstr "Google"
+
+#. Author URI of the plugin/theme
+msgid "https://support.google.com/adsense/answer/3380626"
+msgstr "https://support.google.com/adsense/answer/3380626"
